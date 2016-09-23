@@ -1,0 +1,15 @@
+Excercise 3.1
+
+
+
+Node.js is a platform for building server-side event-driven i/o application using javascript.
+Express.js is a framework based on node.js for building web-application using principles and approaches of node.js
+
+All npm packages contain a file, usually in the project root, called package.json - this file holds various
+metadata relevant to the project. This file is used to give information to npm that allows it to identify the project as well as handle the project's dependencies
+
+
+Excerciese 3.2
+
+a. These files are static because their location is constant. It does not change.
+b. The server doesn't continue to serve up the hello world message.
