@@ -1,0 +1,45 @@
+li {
+  list-style: lower-roman;
+}
+
+/* numbered paragraphs */
+body {counter-reset: headnum;}
+
+p.bracket:before {
+  content: "(" counter(headnum, upper-latin) ") ";
+  counter-increment: headnum;
+}
+
+#fixed-pin  {
+  position:fixed;
+  top: 3px;
+  right: 3px;
+}
+
+ul {
+  border: 10px solid 	#ADD8E6;
+  width:  100px;
+}
+
+div {
+  border: 10px solid 	#ADD8E6;
+  width:  150px;
+}
+
+h3 {
+  position: relative;
+  left: 200px;
+  bottom: 170px;
+}
+
+#numbered{
+  position: relative;
+  left:200px;
+  bottom: 170px;
+}
+
+ul{
+  position:relative;
+  left: 10px;
+  bottom: 1px;
+}

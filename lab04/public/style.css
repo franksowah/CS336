@@ -1,0 +1,23 @@
+body{
+    font: 16px "Comic Sans MS", cursive;
+    background-image: url("blue-rule.png");
+  }
+
+
+strong {color:red; font-size: 40px;}
+.carrot{color: orange;}
+.spinach{color: green;}
+#first {font-style: italic;  }
+
+p {color: blue;
+  font: 65%/125% "Comic Sans MS", cursive;
+  }
+
+.bracket{color:black;font-size: 100%;}
+
+  #first:before{
+    content: url("pin.png");
+  }
+  p#second:before{
+    content: url("pin.png");
+  }
