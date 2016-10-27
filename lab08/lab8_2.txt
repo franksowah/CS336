@@ -1,0 +1,37 @@
+
+a. i. What makes the UI composable and why does this matter?
+      Composable UI means that the components be selected and assembled in various combinations to satisfy specific
+      user requirements.
+
+    ii. What JSX does:
+      It transforms its syntax into plain JavaScript. This means you can write more readable JavaScript code.
+
+    iii. How the data flows through the components; how are comments loaded? created? saved?
+
+      Components higher in the hierarchy pass their data down to their children.
+      For example, a Commment's data is "accessible as a 'property'" and is passed down from the CommentList.
+      Comment data is stored in comments.json in JSON format.
+      When the state is updated, an ajax request is sent to the server to fetch the comments from the server.
+      Comments are created using HTML forms - when the form is submitted, comments.json is modified to reflect the submission,
+      and when the comments are next fetched, they will appear on the webpage.
+
+    iv.The nature and purpose of props and state; which is immutable and which is mutable and why does this distinction matter?
+      Props are immutable and State is mutable.
+      Since props are passed from and own by the parent, they must remain immutable else such components would stop being composable.
+      State is what allows interaction, since it's private to each component. Whenever state is updated, the component is re-rendered.
+
+
+b.
+    i. Try editing the comments.json file (to add or remove a legal comment). What happens and why?
+      The webpage refreshes and reflect the changes I make in the file because it has been coded to do that every 2 seconds.
+
+    ii. When the CommentBox has loaded comments from the server (in loadCommentsFromServer()), why doesn’t it call render() to make them visible?
+      Adding a comment doesn't change the state, which means that the CommentList doesn't need to be re-rendered.
+
+    iii.Why should components always represent the current state of the view?
+      To make debugging easier, of course.
+      The application might also feel unresponsive and from the user's perspective, suck.
+
+    iv. The app implements optimistic updates. Isn’t optimism here more like foolishness? What if the server rejects the new comment (for whatever reason)?
+      The app is assuming that comments will never be rejected by the server (optimism). If the server rejects the new comment, I guess then we will debug. :)
+------------------------------------------------------------------------------------------------------------------
