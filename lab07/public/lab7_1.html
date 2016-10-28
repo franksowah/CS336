@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Class 7 - jQuery</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="//code.jquery.com/jquery-latest.min.js"></script>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery.js"></script>
+      <script>
+          $( document ).ready(function() {
+      				$("body").append( "<p>Creating a new paragraph with jQuery</p>" );
+              $( "a" ).click(function(event) {
+                 event.preventDefault();
+      					$(this).hide("slow");
+              });
+
+      				$("p").click(function(event) {
+      					$("p").addClass("test");
+      				});
+          });
+      </script>
+    </body>
+</html>
