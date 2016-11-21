@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     entry: [
         __dirname + '/app/scripts/index.js'
@@ -15,13 +16,13 @@ module.exports = {
         ]
     },
     plugins: [
-		    new HtmlWebpackPlugin({template: __dirname + "/app/index.tmpl.html"}),
-        new HtmlWebpackPlugin({filename: "getPerson.html", template: __dirname + "/app/getPerson.html"}),
-        new webpack.HotModuleReplacementPlugin()
+      new HtmlWebpackPlugin({template: __dirname + "/app/index.tmpl.html"}),
+      new HtmlWebpackPlugin({filename: "getPerson.html", template: __dirname + "/app/getPerson.html"}),
+      new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         port: 3001,
-        proxy: { '/people': 'http://localhost:3000' },
+        proxy: { '/api/*': 'http://localhost:3000' },
         colors: true,
         historyApiFallback: true,
         inline: true,
